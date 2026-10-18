@@ -1,0 +1,21 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/prices.js": {
+      "maxDuration": 25
+    },
+    "api/education.js": {
+      "maxDuration": 25
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/prices",
+      "schedule": "0 9 * * *"
+    },
+    {
+      "path": "/api/education",
+      "schedule": "0 10 * * 1"
+    }
+  ]
+}
